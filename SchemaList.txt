@@ -1,0 +1,398 @@
+Connecting to DB2 database: CAI...
+
+   Database Connection Information
+
+ Database server        = DB2/AIX64 12.1.0.0
+ SQL authorization ID   = DB2CAI
+ Local database alias   = CAI
+
+Successfully connected to DB2.
+Fetching tables for schema: AUDIT...
+Found tables: ARCHIVELOGGING
+AUDIT
+CHECKING
+CONTEXT
+EXECUTE
+OBJMAINT
+SECMAINT
+SYSADMIN
+VALIDATE
+--------------------------------------------------------
+
+Table: AUDIT.ARCHIVELOGGING
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+INTEGER 4    LOG_ID       6     -                             
+TIMESTAMP 10   LOG_DATE     8     -                             
+VARCHAR 255  ARCHIVE_FILE 12    -                             
+CHARACTER 64   CHECKSUM     8     -                             
+VARCHAR 64   ARCHIVED_BY  11    -                             
+--------------------------------------------------------
+
+Table: AUDIT.AUDIT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 128  POLNAME      7     -                             
+CHARACTER 1    POLASSOCOBJTYPE 15    -                             
+CHARACTER 1    POLASSOCSUBOBJTY 18    -                             
+VARCHAR 128  POLASSOCNAME 12    -                             
+VARCHAR 128  POLASSOCOBJSCHEM 17    -                             
+CHARACTER 1    AUDITSTATUS  11    -                             
+CHARACTER 1    CHECKINGSTATUS 14    -                             
+CHARACTER 1    CONTEXTSTATUS 13    -                             
+CHARACTER 1    EXECUTESTATUS 13    -                             
+CHARACTER 1    EXECUTEDATA  11    -                             
+CHARACTER 1    OBJMAINTSTATUS 14    -                             
+CHARACTER 1    SECMAINTSTATUS 14    -                             
+CHARACTER 1    SYSADMINSTATUS 14    -                             
+CHARACTER 1    VALIDATESTATUS 14    -                             
+CHARACTER 8    ERRORTYPE    9     -                             
+VARCHAR 1024 DATAPATH     8     -                             
+VARCHAR 1024 ARCHIVEPATH  11    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.CHECKING
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 128  OBJSCHEMA    9     -                             
+VARCHAR 128  OBJNAME      7     -                             
+VARCHAR 32   OBJTYPE      7     -                             
+CHARACTER 34   ACCESSAPP    9     -                             
+CHARACTER 34   ACCESSATT    9     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 128  CHKAUTHID    9     -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+INTEGER 4    ACCESSCONTROLMGR 16    -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.CONTEXT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+CLOB  8388608 STMTTEXT     8     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.EXECUTE
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+VARCHAR 128  SESSNAUTHID  11    -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+BIGINT 8    UOWID        5     -                             
+BIGINT 8    ACTIVITYID   10    -                             
+BIGINT 8    STMTINVOCID  11    -                             
+BIGINT 8    STMTNESTLVL  11    -                             
+VARCHAR 32   ACTIVITYTYPE 12    -                             
+CLOB  8388608 STMTTEXT     8     -                             
+CHARACTER 8    STMTISOLATIONLVL 16    -                             
+BLOB  8192 COMPENVDESC  11    -                             
+INTEGER 4    ROWSMODIFIED 12    -                             
+BIGINT 8    ROWSRETURNED 12    -                             
+BIGINT 8    SAVEPOINTID  11    -                             
+INTEGER 4    STMTVALINDEX 12    -                             
+CHARACTER 16   STMTVALTYPE  11    -                             
+CLOB  131072 STMTVALDATA  11    -                             
+INTEGER 4    STMTVALEXTENDEDI 24    -                             
+CHARACTER 26   LOCAL_START_TIME 16    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.OBJMAINT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 128  OBJSCHEMA    9     -                             
+VARCHAR 128  OBJNAME      7     -                             
+VARCHAR 32   OBJTYPE      7     -                             
+VARCHAR 64   PACKVER      7     -                             
+VARCHAR 128  SECPOLNAME   10    -                             
+VARCHAR 32   ALTERACTION  11    -                             
+VARCHAR 128  PROTCOLNAME  11    -                             
+VARCHAR 128  COLSECLABEL  11    -                             
+VARCHAR 128  SECCOLNAME   10    -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 128  MODULENAME   10    -                             
+VARCHAR 128  ASSOCOBJNAME 12    -                             
+VARCHAR 128  ASSOCOBJSCHEMA 14    -                             
+VARCHAR 32   ASSOCOBJTYPE 12    -                             
+VARCHAR 128  ASSOCSUBOBJNAME 15    -                             
+VARCHAR 32   ASSOCSUBOBJTYPE 15    -                             
+VARCHAR 32   SECURED      7     -                             
+VARCHAR 32   STATE        5     -                             
+VARCHAR 32   ACCESSCONTROL 13    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.SECMAINT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 128  OBJSCHEMA    9     -                             
+VARCHAR 128  OBJNAME      7     -                             
+VARCHAR 32   OBJTYPE      7     -                             
+VARCHAR 128  GRANTOR      7     -                             
+VARCHAR 128  GRANTEE      7     -                             
+VARCHAR 32   GRANTEETYPE  11    -                             
+CHARACTER 34   PRIVAUTH     8     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 32   ACCESSTYPE   10    -                             
+VARCHAR 128  ASSUMEAUTHID 12    -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 32   GRANTORTYPE  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 128  TRSTCTXUSER  11    -                             
+INTEGER 4    TRSTCTXUSERAUTH 15    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 32   ALTERACTION  11    -                             
+VARCHAR 128  ASSOCOBJNAME 12    -                             
+VARCHAR 128  ASSOCOBJSCHEMA 14    -                             
+VARCHAR 32   ASSOCOBJTYPE 12    -                             
+VARCHAR 128  ASSOCSUBOBJNAME 15    -                             
+VARCHAR 32   ASSOCSUBOBJTYPE 15    -                             
+VARCHAR 32   SECURED      7     -                             
+VARCHAR 32   STATE        5     -                             
+VARCHAR 32   ACCESSCONTROL 13    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.SYSADMIN
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 2048 EVENTDETAILS 12    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.VALIDATE
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARACTER 26   TIMESTAMP    9     -                             
+CHARACTER 8    CATEGORY     8     -                             
+VARCHAR 32   EVENT        5     -                             
+INTEGER 4    CORRELATOR   10    -                             
+INTEGER 4    STATUS       6     -                             
+CHARACTER 8    DATABASE     8     -                             
+VARCHAR 1024 USERID       6     -                             
+VARCHAR 128  AUTHID       6     -                             
+VARCHAR 1024 EXECID       6     -                             
+SMALLINT 2    NODENUM      7     -                             
+SMALLINT 2    COORDNUM     8     -                             
+VARCHAR 255  APPID        5     -                             
+VARCHAR 1024 APPNAME      7     -                             
+VARCHAR 32   AUTHTYPE     8     -                             
+VARCHAR 128  PKGSCHEMA    9     -                             
+VARCHAR 128  PKGNAME      7     -                             
+SMALLINT 2    PKGSECNUM    9     -                             
+VARCHAR 64   PKGVER       6     -                             
+VARCHAR 32   PLUGINNAME   10    -                             
+VARCHAR 10   LCLTRANSID   10    -                             
+VARCHAR 30   GLBLTRANSID  11    -                             
+VARCHAR 255  CLNTUSERID   10    -                             
+VARCHAR 255  CLNTWRKSTNAME 13    -                             
+VARCHAR 255  CLNTAPPNAME  11    -                             
+VARCHAR 255  CLNTACCSTRING 13    -                             
+VARCHAR 255  TRSTCTXNAME  11    -                             
+CHARACTER 1    CONTRSTTYPE  11    -                             
+VARCHAR 128  ROLEINHERITED 13    -                             
+VARCHAR 1024 ORIGUSERID   10    -                             
+VARCHAR 128  INSTNAME     8     -                             
+VARCHAR 255  HOSTNAME     8     -                             
+VARCHAR 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+DB20000I  The SQL command completed successfully.
+Disconnected from DB2.
+Finished processing all tables in schema AUDIT.

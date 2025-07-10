@@ -1,4 +1,4 @@
-i#!/bin/bash
+#!/bin/bash
 
 # --- Configuration ---
 DB_NAME="" # Initialize DB_NAME, will be set from argument or prompt

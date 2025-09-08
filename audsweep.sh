@@ -8,7 +8,7 @@
 ##### We use ",," to convert a variable to lower case as seen below.
 #### Database SID
 #### CUR_SID=${1^^} would take the input value of "cai" and make the
-####               value of CUR_SID = "CAI"
+####          value of CUR_SID = "CAI"
 ##################################
 ######################################################
 # The purpose of ths script is as follows:
@@ -87,6 +87,23 @@ DB_USER=${DB_TYPE}${DB_USER_SID}
 # Let's set up where the files are going.
 # LOGDIR depends on CUR_SID, so it must be defined after CUR_SID.
 LOGDIR="/db2/$CUR_SID/AUDIT/log"
+
+# --- SINGLE INSTANCE LOCKING MECHANISM ---
+# We use a directory as a lock. mkdir is an atomic operation.
+# The trap command ensures the lock is cleaned up on exit.
+LOCK_DIR="/tmp/audsweep_$CUR_SID.lock"
+
+# Attempt to acquire the lock. If the directory already exists,
+# another instance of the script is running.
+if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+    echo "Error: A lock file already exists at '$LOCK_DIR'." >&2
+    echo "Another instance of this script for SID '$CUR_SID' may be running." >&2
+    exit 100 # Exit code for lock contention
+fi
+
+# Set a trap to ensure the lock directory is removed on script exit,
+# regardless of whether it's a success (exit 0) or failure.
+trap 'rmdir "$LOCK_DIR" 2>/dev/null' EXIT
 
 # Create LOGDIR if it doesn't exist, as it's needed for the final log location
 # and potentially for the temp log if LOGDIR is the same as /tmp.
@@ -210,8 +227,8 @@ if [ -z "${DB2DBDFT}" ]; then
     echo "Exiting script with exit code 31 - see code ${SCRIPT_PATH} to determine where it failed"
     exit_with_log_move 31 "$LOGDIR" "$TEMP_LOGFILE" "$0" "$SCRIPT_PATH"
 else
-   echo "This script is running under user: ${USER}"
-   echo "DB2DBDFT is set to: ${DB2DBDFT}"
+    echo "This script is running under user: ${USER}"
+    echo "DB2DBDFT is set to: ${DB2DBDFT}"
 fi
 #### Database SID - convert to uppercase - strictly defensive but saves grief for testing.
 # CUR_SID=${1^^} # Already done earlier
@@ -520,3 +537,4 @@ fi
 
 echo "Exiting script with exit code 0"
 exit_with_log_move 0 "$LOGDIR" "$TEMP_LOGFILE" "$0" "$SCRIPT_PATH"
+

@@ -41,12 +41,44 @@ FINAL_EXTRACT_BASE_DIR="${EXTRACT_OUTPUT_DIR}/${FINALEXTRACT}"
 ## $FINAL_EXTRACT_BASE_DIR = /db2/$CUR_SID/AUDIT/audarchive/Extractprocessed/FinalExtract - used in a later script
 ## The latter are the files sent over to the auditors on the server in India.
 ############################################################################################
-# --- Logging Setup ---
+
+# --- Locking and Logging Setup ---
 SCRIPT_NAME=$(basename "$0")
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOGDIR="/db2/$CUR_SID/AUDIT/log" # Ensure this directory exists or create it
 TEMP_LOGFILE="/tmp/${SCRIPT_NAME}_${TIMESTAMP}_$$.log"
 FINAL_LOGFILE="${LOGDIR}/${SCRIPT_NAME}_${TIMESTAMP}.log"
+LOCK_FILE="/tmp/${SCRIPT_NAME}.lock"
+
+# Function to clean up the lock file
+cleanup() {
+    local exit_code="$?"
+    echo "Caught exit signal or completed. Cleaning up lock file."
+    rm -f "$LOCK_FILE"
+    exit "$exit_code"
+}
+
+# Trap signals for robust cleanup: EXIT, INT (Ctrl+C), TERM (kill command)
+trap cleanup EXIT INT TERM
+
+# --- Script Start ---
+# Check for existing lock file to ensure single instance
+if [ -f "$LOCK_FILE" ]; then
+    # Check if the process ID inside the lock file is still running
+    PID=$(cat "$LOCK_FILE")
+    if ps -p "$PID" > /dev/null; then
+        echo "ERROR: Another instance of this script is already running with PID $PID." >&2
+        echo "If this is an error, manually remove the lock file: $LOCK_FILE" >&2
+        exit 1
+    else
+        echo "WARNING: Stale lock file found. Process with PID $PID is not running. Removing stale lock and continuing."
+        rm -f "$LOCK_FILE"
+    fi
+fi
+
+# Create a new lock file with the current PID
+echo $$ > "$LOCK_FILE" || { echo "ERROR: Failed to create lock file. Exiting." >&2; exit 1; }
+echo "Lock file created: $LOCK_FILE"
 
 # Create LOGDIR if it doesn't exist
 mkdir -p "$LOGDIR" || { echo "Error: Failed to create log directory '$LOGDIR'. Exiting." >&2; exit 1; }
@@ -148,7 +180,7 @@ is_db2_table_empty() {
     fi
 }
 
-# --- Script Start ---
+# --- Main Processing Logic ---
 
 # --- Authentication and Instance Owner Check ---
 CURRENT_OS_USER=$(whoami)

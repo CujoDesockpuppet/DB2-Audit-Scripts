@@ -149,6 +149,21 @@ done
 echo "---------------------------------------------------" >> "$REPORT_FILE"
 echo "File move and report generation complete at $(date)" >> "$REPORT_FILE"
 echo "Report is located at $REPORT_FILE" >> "$REPORT_FILE"
+# --- NEW CODE ADDED HERE ---
+
+echo ""
+echo "--- Files in Destination Directory: $DEST_DIR ---"
+# List the contents of the destination directory, sending output to both the screen (terminal) 
+# and the temporary log file ($TEMP_LOGFILE), which becomes the final logmove.sh_*.log file.
+ls -l "$DEST_DIR" | tee -a "$TEMP_LOGFILE"
+echo "-------------------------------------------------"
+
+# --- END OF NEW CODE ---
+
+echo "" | tee -a "$TEMP_LOGFILE"
+echo "Final Status: Files older than 35 days were successfully MOVED." | tee -a "$TEMP_LOGFILE"
+echo "Destination Directory: $DEST_DIR" | tee -a "$TEMP_LOGFILE"
+echo "" | tee -a "$TEMP_LOGFILE"
 
 # Final clean exit with log move
 exit_with_log_move 0 "$LOGDIR" "$TEMP_LOGFILE" "$0" "$SCRIPT_PATH"

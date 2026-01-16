@@ -1,0 +1,390 @@
+Connecting to DB2 database: CAI...
+
+   Database Connection Information
+
+ Database server        = DB2/AIX64 12.1.0.0
+ SQL authorization ID   = DB2CAI
+ Local database alias   = CAI
+
+Successfully connected to DB2.
+Fetching tables for schema: AUDIT...
+Found tables: ARCHIVELOGGING AUDIT CHECKING CONTEXT EXECUTE OBJMAINT SECMAINT SYSADMIN VALIDATE
+--------------------------------------------------------
+
+Table: AUDIT.ARCHIVELOGGING
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+INTEG 4    LOG_ID       6     -                             
+TIMES 10   LOG_DATE     8     Timestamp when the audit file was archived.
+VARCH 255  ARCHIVE_FILE 12    Full path to the archived audit file.
+CHARA 64   CHECKSUM     8     SHA256 checksum of the archived file for integrity
+VARCH 64   ARCHIVED_BY  11    User who executed the archiving script.
+--------------------------------------------------------
+
+Table: AUDIT.AUDIT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+CHARA 8    DATABASE     8     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 128  POLNAME      7     -                             
+CHARA 1    POLASSOCOBJT 15    -                             
+CHARA 1    POLASSOCSUBO 18    -                             
+VARCH 128  POLASSOCNAME 12    -                             
+VARCH 128  POLASSOCOBJS 17    -                             
+CHARA 1    AUDITSTATUS  11    -                             
+CHARA 1    CHECKINGSTAT 14    -                             
+CHARA 1    CONTEXTSTATU 13    -                             
+CHARA 1    EXECUTESTATU 13    -                             
+CHARA 1    EXECUTEDATA  11    -                             
+CHARA 1    OBJMAINTSTAT 14    -                             
+CHARA 1    SECMAINTSTAT 14    -                             
+CHARA 1    SYSADMINSTAT 14    -                             
+CHARA 1    VALIDATESTAT 14    -                             
+CHARA 8    ERRORTYPE    9     -                             
+VARCH 1024 DATAPATH     8     -                             
+VARCH 1024 ARCHIVEPATH  11    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.CHECKING
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 128  OBJSCHEMA    9     -                             
+VARCH 128  OBJNAME      7     -                             
+VARCH 32   OBJTYPE      7     -                             
+CHARA 34   ACCESSAPP    9     -                             
+CHARA 34   ACCESSATT    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 128  CHKAUTHID    9     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+INTEG 4    ACCESSCONTRO 16    -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.CONTEXT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+CLOB  8388608 STMTTEXT     8     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.EXECUTE
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+VARCH 128  SESSNAUTHID  11    -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+BIGIN 8    UOWID        5     -                             
+BIGIN 8    ACTIVITYID   10    -                             
+BIGIN 8    STMTINVOCID  11    -                             
+BIGIN 8    STMTNESTLVL  11    -                             
+VARCH 32   ACTIVITYTYPE 12    -                             
+CLOB  8388608 STMTTEXT     8     -                             
+CHARA 8    STMTISOLATIO 16    -                             
+BLOB  8192 COMPENVDESC  11    -                             
+INTEG 4    ROWSMODIFIED 12    -                             
+BIGIN 8    ROWSRETURNED 12    -                             
+BIGIN 8    SAVEPOINTID  11    -                             
+INTEG 4    STMTVALINDEX 12    -                             
+CHARA 16   STMTVALTYPE  11    -                             
+CLOB  131072 STMTVALDATA  11    -                             
+INTEG 4    STMTVALEXTEN 24    -                             
+CHARA 26   LOCAL_START_ 16    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.OBJMAINT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 128  OBJSCHEMA    9     -                             
+VARCH 128  OBJNAME      7     -                             
+VARCH 32   OBJTYPE      7     -                             
+VARCH 64   PACKVER      7     -                             
+VARCH 128  SECPOLNAME   10    -                             
+VARCH 32   ALTERACTION  11    -                             
+VARCH 128  PROTCOLNAME  11    -                             
+VARCH 128  COLSECLABEL  11    -                             
+VARCH 128  SECCOLNAME   10    -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 128  MODULENAME   10    -                             
+VARCH 128  ASSOCOBJNAME 12    -                             
+VARCH 128  ASSOCOBJSCHE 14    -                             
+VARCH 32   ASSOCOBJTYPE 12    -                             
+VARCH 128  ASSOCSUBOBJN 15    -                             
+VARCH 32   ASSOCSUBOBJT 15    -                             
+VARCH 32   SECURED      7     -                             
+VARCH 32   STATE        5     -                             
+VARCH 32   ACCESSCONTRO 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.SECMAINT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 128  OBJSCHEMA    9     -                             
+VARCH 128  OBJNAME      7     -                             
+VARCH 32   OBJTYPE      7     -                             
+VARCH 128  GRANTOR      7     -                             
+VARCH 128  GRANTEE      7     -                             
+VARCH 32   GRANTEETYPE  11    -                             
+CHARA 34   PRIVAUTH     8     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 32   ACCESSTYPE   10    -                             
+VARCH 128  ASSUMEAUTHID 12    -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 32   GRANTORTYPE  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 128  TRSTCTXUSER  11    -                             
+INTEG 4    TRSTCTXUSERA 15    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 32   ALTERACTION  11    -                             
+VARCH 128  ASSOCOBJNAME 12    -                             
+VARCH 128  ASSOCOBJSCHE 14    -                             
+VARCH 32   ASSOCOBJTYPE 12    -                             
+VARCH 128  ASSOCSUBOBJN 15    -                             
+VARCH 32   ASSOCSUBOBJT 15    -                             
+VARCH 32   SECURED      7     -                             
+VARCH 32   STATE        5     -                             
+VARCH 32   ACCESSCONTRO 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.SYSADMIN
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 2048 EVENTDETAILS 12    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.VALIDATE
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+VARCH 1024 EXECID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 32   AUTHTYPE     8     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 32   PLUGINNAME   10    -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+DB20000I  The SQL command completed successfully.
+Disconnected from DB2.
+Finished processing all tables in schema AUDIT.

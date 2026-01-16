@@ -1,0 +1,671 @@
+Success: The current user (db2cai) is the DB2 instance owner.
+################################################################################################################
+#                           DB2 AUDIT SETTINGS                                                                 #
+################################################################################################################
+DB2 AUDIT SETTINGS:
+
+Audit active: "TRUE "
+Log audit events: "BOTH"
+Log checking events: "FAILURE"
+Log object maintenance events: "BOTH"
+Log security maintenance events: "BOTH"
+Log system administrator events: "FAILURE"
+Log validate events: "FAILURE"
+Log context events: "BOTH"
+Return SQLCA on audit error: "FALSE "
+Audit Data Path: "/db2/CAI/AUDIT/"
+Audit Archive Path: "/db2/CAI/AUDIT/audarchive/"
+
+AUD0000I  Operation succeeded.
+################################################################################################################
+#                           DB2 AUDIT SETTINGS - AUDIT POLICY CAPSCHEMA                                        #
+################################################################################################################
+
+POLICY          VALUE             
+--------------- ------------------
+AUDITPOLICYNAME CAPSCHEMA         
+AUDITSTATUS     B                 
+CONTEXTSTATUS   B                 
+VALIDATESTATUS  N                 
+CHECKINGSTATUS  B                 
+SECMAINTSTATUS  B                 
+OBJMAINTSTATUS  B                 
+SYSADMINSTATUS  B                 
+EXECUTESTATUS   B                 
+EXECUTEWITHDATA Y                 
+
+  10 record(s) selected.
+
+################################################################################################################
+#                           DB2 AUDIT SETTINGS - AUDIT POLICY ADMINSPOLICY                                     #
+################################################################################################################
+
+POLICY          VALUE             
+--------------- ------------------
+AUDITPOLICYNAME ADMINSPOLICY      
+AUDITSTATUS     B                 
+CONTEXTSTATUS   B                 
+VALIDATESTATUS  B                 
+CHECKINGSTATUS  B                 
+SECMAINTSTATUS  B                 
+OBJMAINTSTATUS  B                 
+SYSADMINSTATUS  B                 
+EXECUTESTATUS   B                 
+EXECUTEWITHDATA Y                 
+
+  10 record(s) selected.
+
+################################################################################################################
+#                           DB2 AUDIT SETTINGS OBJECT TYPES AUDITED                                            #
+################################################################################################################
+Policy       Obj Type  Sub Obj Type   Schema     Object Name
+------       --------  ------------   ------     -----------
+ADMINSPOLICY i          R             -          DB2_SYSADM_DBA      
+CAPSCHEMA    T                        AUDIT      ARCHIVELOGGING      
+CAPSCHEMA    T                        SAPCAP     ANLA                
+CAPSCHEMA    T                        SAPCAP     ANLB                
+CAPSCHEMA    T                        SAPCAP     ANLZ                
+CAPSCHEMA    T                        SAPCAP     BC001               
+CAPSCHEMA    T                        SAPCAP     BD001               
+CAPSCHEMA    T                        SAPCAP     BP000               
+CAPSCHEMA    T                        SAPCAP     BSAD                
+CAPSCHEMA    T                        SAPCAP     BSAK                
+CAPSCHEMA    T                        SAPCAP     BSAS                
+CAPSCHEMA    T                        SAPCAP     BSID                
+CAPSCHEMA    T                        SAPCAP     BSIK                
+CAPSCHEMA    T                        SAPCAP     BSIS                
+CAPSCHEMA    T                        SAPCAP     CDCLS               
+CAPSCHEMA    T                        SAPCAP     CDHDR               
+CAPSCHEMA    T                        SAPCAP     COBK                
+CAPSCHEMA    T                        SAPCAP     COEP                
+CAPSCHEMA    T                        SAPCAP     COSP                
+CAPSCHEMA    T                        SAPCAP     COSS                
+CAPSCHEMA    T                        SAPCAP     DBTABLOG            
+CAPSCHEMA    T                        SAPCAP     DD01L               
+CAPSCHEMA    T                        SAPCAP     DD02L               
+CAPSCHEMA    T                        SAPCAP     DD03L               
+CAPSCHEMA    T                        SAPCAP     DD04L               
+CAPSCHEMA    T                        SAPCAP     DD04T               
+CAPSCHEMA    T                        SAPCAP     DD09L               
+CAPSCHEMA    T                        SAPCAP     FAGLFLEXA           
+CAPSCHEMA    T                        SAPCAP     FAGLFLEXT           
+CAPSCHEMA    T                        SAPCAP     KNA1                
+CAPSCHEMA    T                        SAPCAP     KNB1                
+CAPSCHEMA    T                        SAPCAP     KNBK                
+CAPSCHEMA    T                        SAPCAP     KNC1                
+CAPSCHEMA    T                        SAPCAP     KNC3                
+CAPSCHEMA    T                        SAPCAP     LFA1                
+CAPSCHEMA    T                        SAPCAP     LFB1                
+CAPSCHEMA    T                        SAPCAP     LFBK                
+CAPSCHEMA    T                        SAPCAP     LFC1                
+CAPSCHEMA    T                        SAPCAP     LFC3                
+CAPSCHEMA    T                        SAPCAP     LFM1                
+CAPSCHEMA    T                        SAPCAP     MAKT                
+CAPSCHEMA    T                        SAPCAP     MARA                
+CAPSCHEMA    T                        SAPCAP     MARC                
+CAPSCHEMA    T                        SAPCAP     MARD                
+CAPSCHEMA    T                        SAPCAP     MBEW                
+CAPSCHEMA    T                        SAPCAP     MKPF                
+CAPSCHEMA    T                        SAPCAP     MSEG                
+CAPSCHEMA    T                        SAPCAP     PA0002              
+CAPSCHEMA    T                        SAPCAP     PA0009              
+CAPSCHEMA    T                        SAPCAP     PAHI                
+CAPSCHEMA    T                        SAPCAP     RFBLG               
+CAPSCHEMA    T                        SAPCAP     SE16N_CD_DATA       
+CAPSCHEMA    T                        SAPCAP     SE16N_CD_KEY        
+CAPSCHEMA    T                        SAPCAP     SKA1                
+CAPSCHEMA    T                        SAPCAP     SKAT                
+CAPSCHEMA    T                        SAPCAP     SKB1                
+CAPSCHEMA    T                        SAPCAP     T000                
+CAPSCHEMA    T                        SAPCAP     WITH_ITEM           
+CAPSCHEMA    T                        SAPCAP     ZUSRPWD1            
+CAPSCHEMA    i          U             -          DB2CAI              
+CAPSCHEMA    i          U             -          SAPCAP              
+################################################################################################################
+#                           DB2 AUDIT SETTINGS AUDIT EXCEPTIONS LISTING                                        #
+################################################################################################################
+
+1        2                    3                  
+-------- -------------------- -------------------
+GLOBAL   DB6CTX_SAPCAP        2025-01-22-02.35.50
+
+  1 record(s) selected.
+
+################################################################################################################
+#                           DB2 AUDIT SETTINGS AUDIT ATTRIBUTES LISTING                                        #
+################################################################################################################
+
+CONTEXTNAME          ATTR_NAME            ATTR_VALUE                    
+-------------------- -------------------- ------------------------------
+DB6CTX_SAPCAP        ENCRYPTION           NONE                          
+DB6CTX_SAPCAP        TRUST PROCEDURE      SAPTOOLS.TRUST_PROC           
+
+  2 record(s) selected.
+
+################################################################################################################
+#                           DB2 AUDIT SETTINGS AUDIT CONTEXT WORK PROCESS LISTING                              #
+################################################################################################################
+
+APL_HANDLE           APL_NAME             APPLICATION_ID                      CLIENT_PID CLIENT_WRKSTNNAME    SYSTEM_AUTH_IDM TRUSTED_CTX_NAME    
+-------------------- -------------------- ----------------------------------- ---------- -------------------- --------------- --------------------
+11296                hvr                  *LOCAL.db2cai.250915062106          66519766   jq03a010             HVRCAI          -                   
+13546                disp+work            167.228.20.186.36446.250915144743   12388022   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14046                disp+work            167.228.20.186.34837.250915142720   36507050   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13842                disp+work            167.228.20.186.33095.250915135939   4982764    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13138                disp+work            167.228.20.186.36085.250915144242   46860192   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13763                disp+work            167.228.20.186.63745.250915133212   58328190   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14013                disp+work            167.228.20.186.33514.250915140544   56363366   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14026                disp+work            167.228.20.186.33594.250915140720   24643742   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13572                disp+work            167.228.20.186.35597.250915143646   26283894   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13447                disp+work            167.228.20.186.34912.250915142806   1053404    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13868                disp+work            167.228.20.186.36022.250915144232   18154598   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13743                disp+work            167.228.20.186.64635.250915134047   59116144   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14164                disp+work            167.228.20.186.37052.250915145737   47777678   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13585                disp+work            167.228.20.186.35979.250915144220   48956298   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14177                disp+work            167.228.20.186.35987.250915144226   16320644   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+11427                hvr                  *LOCAL.db2cai.250915054846          10224556   jq03a010             HVRCAI          -                   
+13848                disp+work            167.228.20.186.33596.250915140720   55118958   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13723                disp+work            167.228.20.186.65141.250915134717   59116144   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13269                disp+work            167.228.20.186.63191.250915132444   42075224   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14065                disp+work            167.228.20.186.34550.250915142218   66849300   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+12940                disp+work            167.228.20.186.34885.250915142734   1053404    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13736                disp+work            167.228.20.186.64693.250915134210   16256956   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+12828                db2bp                *LOCAL.db2cai.250915121359          21303090   -                    DB2CAI          -                   
+13078                disp+work            167.228.20.186.61800.250915130143   49482174   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13091                disp+work            167.228.20.186.61993.250915130432   6096208    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13591                disp+work            167.228.20.186.34888.250915142741   49482174   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13762                disp+work            167.228.20.186.63750.250915133214   42075224   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13650                disp+work            167.228.20.186.35867.250915143943   26086368   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13742                disp+work            167.228.20.186.33302.250915140218   48956298   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13584                disp+work            167.228.20.186.62323.250915131044   6951430    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13834                disp+work            167.228.20.186.32942.250915135712   13239204   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13459                disp+work            167.228.20.186.33571.250915140642   56363366   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13630                disp+work            167.228.20.186.36053.250915144240   16320644   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14176                disp+work            167.228.20.186.36736.250915145226   39978474   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13051                disp+work            167.228.20.186.36503.250915144842   61408896   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13972                disp+work            167.228.20.186.34285.250915141718   6229956    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14143                disp+work            167.228.20.186.36444.250915144738   18287228   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13202                disp+work            167.228.20.186.63238.250915132602   30412342   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13682                disp+work            167.228.20.186.32944.250915135718   33621892   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14320                disp+work            167.228.20.186.37331.250915150044   14946100   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13866                disp+work            167.228.20.186.36738.250915145231   43844240   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13491                db2jcc_application   167.228.8.151.34042.250915145524    -          -                    SPLK_CAI        -                   
+14083                disp+work            167.228.20.186.34559.250915142229   36899554   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13629                disp+work            167.228.20.186.36093.250915144244   44237330   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13721                disp+work            167.228.20.186.37026.250915145727   659484     caiapp07             SAPCAP          DB6CTX_SAPCAP       
+12313                disp+work            167.228.20.186.62408.250915131205   18941220   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13655                disp+work            167.228.20.186.36439.250915144733   13437844   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13826                disp+work            167.228.20.186.65453.250915135211   44240656   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14076                disp+work            167.228.20.186.35870.250915143945   10883548   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13951                disp+work            167.228.20.186.34288.250915141722   16581244   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13497                disp+work            167.228.20.186.34564.250915142233   66457312   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13622                disp+work            167.228.20.186.36750.250915145242   45155126   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13668                disp+work            167.228.20.186.36021.250915144230   46860192   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13543                disp+work            167.228.20.186.33966.250915141230   18154598   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13260                disp+work            167.228.20.186.33274.250915140142   47777678   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14056                disp+work            167.228.20.186.36025.250915144234   1443180    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13556                disp+work            167.228.20.186.35262.250915143231   39389114   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13806                disp+work            167.228.20.186.64702.250915134219   50990148   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13352                disp+work            167.228.20.186.33592.250915140715   65078814   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13602                disp+work            167.228.20.186.36732.250915145224   41226166   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13477                disp+work            167.228.20.186.34301.250915141742   47907958   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13773                disp+work            167.228.20.186.37431.250915150230   58328190   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13569                disp+work            167.228.20.186.35251.250915143222   47907312   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14003                disp+work            167.228.20.186.33520.250915140558   47907958   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13562                disp+work            167.228.20.186.36145.250915144341   4982764    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13812                disp+work            167.228.20.186.65135.250915134711   63636832   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13687                disp+work            167.228.20.186.36437.250915144727   63571960   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13733                disp+work            167.228.20.186.37046.250915145731   64685320   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13825                disp+work            167.228.20.186.65439.250915135153   18940168   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13496                disp+work            167.228.20.186.34567.250915142239   52363620   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13542                disp+work            167.228.20.186.33924.250915141216   27462086   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13805                disp+work            167.228.20.186.64700.250915134215   23790454   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13055                disp+work            167.228.20.186.36582.250915144941   6951430    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13226                disp+work            167.228.20.186.36906.250915145450   1443180    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14114                disp+work            167.228.20.186.35899.250915144028   10883548   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13831                disp+work            167.228.20.186.32951.250915135723   55118958   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14127                disp+work            167.228.20.186.36742.250915145237   26609336   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+11048                hvr                  *LOCAL.db2cai.250915062103          66519766   jq03a010             HVRCAI          -                   
+14344                db2bp                *LOCAL.db2cai.250915150356          11014170   -                    DB2CAI          -                   
+13469                disp+work            167.228.20.186.62395.250915131141   22547982   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13765                disp+work            167.228.20.186.63779.250915133241   30412342   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13686                disp+work            167.228.20.186.35257.250915143226   7344082    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13857                disp+work            167.228.20.186.33926.250915141220   49021926   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13607                disp+work            167.228.20.186.36429.250915144721   11997680   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13778                disp+work            167.228.20.186.64292.250915133702   41226166   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13653                disp+work            167.228.20.186.34820.250915142713   66457312   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+12949                disp+work            167.228.20.186.34879.250915142729   7933620    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14258                disp+work            167.228.20.186.37208.250915145942   18940168   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13679                disp+work            167.228.20.186.62053.250915130542   22547982   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13975                disp+work            167.228.20.186.34845.250915142724   54528352   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13646                disp+work            167.228.20.186.36432.250915144723   18351874   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13863                disp+work            167.228.20.186.33300.250915140213   25429062   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13001                disp+work            167.228.20.186.35699.250915143728   38601018   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14001                disp+work            167.228.20.186.33933.250915141225   42273792   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13547                disp+work            167.228.20.186.34078.250915141341   6096208    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13968                disp+work            167.228.20.186.33370.250915140342   39194434   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13718                disp+work            167.228.20.186.37012.250915145726   36507050   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13685                disp+work            167.228.20.186.35986.250915144225   66849300   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13152                disp+work            167.228.20.186.33208.250915140044   39194434   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13665                disp+work            167.228.20.186.62073.250915130606   23923436   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14211                disp+work            167.228.20.186.37385.250915150142   6688778    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+11428                hvr                  *LOCAL.db2cai.250915054859          10224556   jq03a010             HVRCAI          -                   
+13599                disp+work            167.228.20.186.35695.250915143724   6688778    caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13770                disp+work            167.228.20.186.65140.250915134715   11997680   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13737                disp+work            167.228.20.186.64625.250915134035   26086368   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+13954                disp+work            167.228.20.186.36040.250915144239   61408896   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+14079                disp+work            167.228.20.186.34555.250915142223   62458358   caiapp07             SAPCAP          DB6CTX_SAPCAP       
+
+  107 record(s) selected.
+
+################################################################################################################
+#                          AUDIT SCHEMA TABLES                                                                 #
+################################################################################################################
+
+Table/View                      Schema          Type  Creation time             
+------------------------------- --------------- ----- --------------------------
+ARCHIVELOGGING                  AUDIT           T     2025-07-09-22.05.45.508440
+AUDIT                           AUDIT           T     2025-06-18-21.52.07.183449
+CHECKING                        AUDIT           T     2025-06-18-21.52.07.202737
+CONTEXT                         AUDIT           T     2025-06-18-21.52.07.305620
+EXECUTE                         AUDIT           T     2025-06-18-21.52.07.336622
+OBJMAINT                        AUDIT           T     2025-06-18-21.52.07.220621
+SECMAINT                        AUDIT           T     2025-06-18-21.52.07.241848
+SYSADMIN                        AUDIT           T     2025-06-18-21.52.07.264742
+VALIDATE                        AUDIT           T     2025-06-18-21.52.07.287632
+
+  9 record(s) selected.
+
+################################################################################################################
+#                          AUDIT SCHEMA TABLES LAYOUT                                                          #
+################################################################################################################
+Connecting to DB2 database: CAI...
+
+   Database Connection Information
+
+ Database server        = DB2/AIX64 12.1.2.0
+ SQL authorization ID   = DB2CAI
+ Local database alias   = CAI
+
+Successfully connected to DB2.
+Fetching tables for schema: AUDIT...
+Found tables: ARCHIVELOGGING AUDIT CHECKING CONTEXT EXECUTE OBJMAINT SECMAINT SYSADMIN VALIDATE
+--------------------------------------------------------
+
+Table: AUDIT.ARCHIVELOGGING
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+INTEG 4    LOG_ID       6     -                             
+TIMES 10   LOG_DATE     8     Timestamp when the audit file was archived.
+VARCH 255  ARCHIVE_FILE 12    Full path to the archived audit file.
+CHARA 64   CHECKSUM     8     SHA256 checksum of the archived file for integrity
+VARCH 64   ARCHIVED_BY  11    User who executed the archiving script.
+--------------------------------------------------------
+
+Table: AUDIT.AUDIT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+CHARA 8    DATABASE     8     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 128  POLNAME      7     -                             
+CHARA 1    POLASSOCOBJT 15    -                             
+CHARA 1    POLASSOCSUBO 18    -                             
+VARCH 128  POLASSOCNAME 12    -                             
+VARCH 128  POLASSOCOBJS 17    -                             
+CHARA 1    AUDITSTATUS  11    -                             
+CHARA 1    CHECKINGSTAT 14    -                             
+CHARA 1    CONTEXTSTATU 13    -                             
+CHARA 1    EXECUTESTATU 13    -                             
+CHARA 1    EXECUTEDATA  11    -                             
+CHARA 1    OBJMAINTSTAT 14    -                             
+CHARA 1    SECMAINTSTAT 14    -                             
+CHARA 1    SYSADMINSTAT 14    -                             
+CHARA 1    VALIDATESTAT 14    -                             
+CHARA 8    ERRORTYPE    9     -                             
+VARCH 1024 DATAPATH     8     -                             
+VARCH 1024 ARCHIVEPATH  11    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.CHECKING
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 128  OBJSCHEMA    9     -                             
+VARCH 128  OBJNAME      7     -                             
+VARCH 32   OBJTYPE      7     -                             
+CHARA 34   ACCESSAPP    9     -                             
+CHARA 34   ACCESSATT    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 128  CHKAUTHID    9     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+INTEG 4    ACCESSCONTRO 16    -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.CONTEXT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+CLOB  8388608 STMTTEXT     8     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.EXECUTE
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+VARCH 128  SESSNAUTHID  11    -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+BIGIN 8    UOWID        5     -                             
+BIGIN 8    ACTIVITYID   10    -                             
+BIGIN 8    STMTINVOCID  11    -                             
+BIGIN 8    STMTNESTLVL  11    -                             
+VARCH 32   ACTIVITYTYPE 12    -                             
+CLOB  8388608 STMTTEXT     8     -                             
+CHARA 8    STMTISOLATIO 16    -                             
+BLOB  8192 COMPENVDESC  11    -                             
+INTEG 4    ROWSMODIFIED 12    -                             
+BIGIN 8    ROWSRETURNED 12    -                             
+BIGIN 8    SAVEPOINTID  11    -                             
+INTEG 4    STMTVALINDEX 12    -                             
+CHARA 16   STMTVALTYPE  11    -                             
+CLOB  131072 STMTVALDATA  11    -                             
+INTEG 4    STMTVALEXTEN 24    -                             
+CHARA 26   LOCAL_START_ 16    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.OBJMAINT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 128  OBJSCHEMA    9     -                             
+VARCH 128  OBJNAME      7     -                             
+VARCH 32   OBJTYPE      7     -                             
+VARCH 64   PACKVER      7     -                             
+VARCH 128  SECPOLNAME   10    -                             
+VARCH 32   ALTERACTION  11    -                             
+VARCH 128  PROTCOLNAME  11    -                             
+VARCH 128  COLSECLABEL  11    -                             
+VARCH 128  SECCOLNAME   10    -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 128  MODULENAME   10    -                             
+VARCH 128  ASSOCOBJNAME 12    -                             
+VARCH 128  ASSOCOBJSCHE 14    -                             
+VARCH 32   ASSOCOBJTYPE 12    -                             
+VARCH 128  ASSOCSUBOBJN 15    -                             
+VARCH 32   ASSOCSUBOBJT 15    -                             
+VARCH 32   SECURED      7     -                             
+VARCH 32   STATE        5     -                             
+VARCH 32   ACCESSCONTRO 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.SECMAINT
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 128  OBJSCHEMA    9     -                             
+VARCH 128  OBJNAME      7     -                             
+VARCH 32   OBJTYPE      7     -                             
+VARCH 128  GRANTOR      7     -                             
+VARCH 128  GRANTEE      7     -                             
+VARCH 32   GRANTEETYPE  11    -                             
+CHARA 34   PRIVAUTH     8     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 32   ACCESSTYPE   10    -                             
+VARCH 128  ASSUMEAUTHID 12    -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 32   GRANTORTYPE  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 128  TRSTCTXUSER  11    -                             
+INTEG 4    TRSTCTXUSERA 15    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 32   ALTERACTION  11    -                             
+VARCH 128  ASSOCOBJNAME 12    -                             
+VARCH 128  ASSOCOBJSCHE 14    -                             
+VARCH 32   ASSOCOBJTYPE 12    -                             
+VARCH 128  ASSOCSUBOBJN 15    -                             
+VARCH 32   ASSOCSUBOBJT 15    -                             
+VARCH 32   SECURED      7     -                             
+VARCH 32   STATE        5     -                             
+VARCH 32   ACCESSCONTRO 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.SYSADMIN
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 2048 EVENTDETAILS 12    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+Table: AUDIT.VALIDATE
+--------------------------------------------------------
+Type  Len  Col Name     C.Len Description
+----- ---- ------------ ----- ------------------------------
+CHARA 26   TIMESTAMP    9     -                             
+CHARA 8    CATEGORY     8     -                             
+VARCH 32   EVENT        5     -                             
+INTEG 4    CORRELATOR   10    -                             
+INTEG 4    STATUS       6     -                             
+CHARA 8    DATABASE     8     -                             
+VARCH 1024 USERID       6     -                             
+VARCH 128  AUTHID       6     -                             
+VARCH 1024 EXECID       6     -                             
+SMALL 2    NODENUM      7     -                             
+SMALL 2    COORDNUM     8     -                             
+VARCH 255  APPID        5     -                             
+VARCH 1024 APPNAME      7     -                             
+VARCH 32   AUTHTYPE     8     -                             
+VARCH 128  PKGSCHEMA    9     -                             
+VARCH 128  PKGNAME      7     -                             
+SMALL 2    PKGSECNUM    9     -                             
+VARCH 64   PKGVER       6     -                             
+VARCH 32   PLUGINNAME   10    -                             
+VARCH 10   LCLTRANSID   10    -                             
+VARCH 30   GLBLTRANSID  11    -                             
+VARCH 255  CLNTUSERID   10    -                             
+VARCH 255  CLNTWRKSTNAM 13    -                             
+VARCH 255  CLNTAPPNAME  11    -                             
+VARCH 255  CLNTACCSTRIN 13    -                             
+VARCH 255  TRSTCTXNAME  11    -                             
+CHARA 1    CONTRSTTYPE  11    -                             
+VARCH 128  ROLEINHERITE 13    -                             
+VARCH 1024 ORIGUSERID   10    -                             
+VARCH 128  INSTNAME     8     -                             
+VARCH 255  HOSTNAME     8     -                             
+VARCH 128  TENANTNAME   10    -                             
+--------------------------------------------------------
+
+DB20000I  The SQL command completed successfully.
+Disconnected from DB2.
+Finished processing all tables in schema AUDIT.
